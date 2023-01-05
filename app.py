@@ -14,11 +14,11 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    usia, jeniskelamin, tekanandarah, kolesterol, guladarah, detakjantung = [
+    diagnosis, jeniskelamin, tekanandarah, kolesterol, guladarah, detakjantung = [
         x for x in request.form.values()]
     data = []
 
-    data.append(int(usia))
+    data.append(int(diagnosis))
     if jeniskelamin == 'Laki-Laki':
         data.extend([1])
     else:
@@ -31,11 +31,11 @@ def predict():
     prediction = model.predict([data])
     output = (prediction[0])
     if output == 1.0:
-        hasil = "Anda beresiko penyakit jantung"
+        hasil = "Anda beresiko kanker payudara"
     else:
-        hasil = "Anda tidak beresiko penyakit jantung"
+        hasil = "Anda tidak beresiko kanker payudara"
 
-    return render_template('index.html', output=hasil, usia=usia, jeniskelamin=jeniskelamin, tekanandarah=tekanandarah, kolesterol=kolesterol, guladarah=guladarah, detakjantung=detakjantung)
+    return render_template('index.html', output=hasil, diagnosis=diagnosis, jeniskelamin=jeniskelamin, tekanandarah=tekanandarah, kolesterol=kolesterol, guladarah=guladarah, detakjantung=detakjantung)
 
     if __name__ == '__main__':
         app.run(debug=True)
