@@ -8,7 +8,7 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>Aplikasi Prediksi Penyakit Jantung</title>
+    <title>Aplikasi Prediksi Kanker Payudara</title>
   </head>
   <body
     class="
@@ -25,7 +25,7 @@
     "
   >
     <main class="bg-white p-16 rounded-lg">
-      <h1 class="text-3xl font-bold mb-8">Prediksi Resiko Penyakit Jantung:</h1>
+      <h1 class="text-3xl font-bold mb-8">Prediksi Resiko Kanker Payudara:</h1>
 
       <form
         action="{{ url_for('predict') }}"
@@ -123,7 +123,7 @@
     </main>
     <section class="mt-8 h-full flex-auto rounded-lg md:mt-0 md:ml-8">
       <div class="bg-white p-16 rounded-lg">
-        <h1 class="text-2xl mb-8">Prediksi Resiko Penyakit Jantung</h1>
+        <h1 class="text-2xl mb-8">Prediksi Resiko Kanker Payudara</h1>
         <h2 class="text-5xl font-bold">{{ output }}</h2>
         {% if (output) != 'belum diprediksi' %}
         <div class="mt-8">
@@ -139,13 +139,13 @@
       <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
         <img
           class="h-24 md:h-28"
-          src="https://digitalent.kominfo.go.id/assets/@images/logo.png"
-          alt="logo-dts"
+          src=""
+          alt=""
         />
         <img
           class="h-24 md:h-28"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Logo_of_Ministry_of_Communication_and_Information_Technology_of_the_Republic_of_Indonesia.svg/604px-Logo_of_Ministry_of_Communication_and_Information_Technology_of_the_Republic_of_Indonesia.svg.png"
-          alt="logo-kominfo"
+          src=""
+          alt=""
         />
       </div>
     </section>
